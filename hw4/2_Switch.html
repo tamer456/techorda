@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function getLetter() {
+    let letter;
+    // Write your code here
+    let s = prompt("Write the value of 's'","");
+    switch(s[0]) {
+        
+    case 'a':
+    case 'e':
+    case 'i':
+    case 'o':
+    case 'u':
+    letter = "A";
+    break;
+
+    case 'b':
+    case 'd':
+    case 'c':
+    case 'f':
+    case 'g':
+    letter="B";
+    break;
+    
+    case 'h':
+    case 'j':
+    case 'k':
+    case 'l':
+    case 'm':
+    letter = "C";
+    break;
+
+    default:
+    letter="D";
+    break;
+}
+    console.log(letter);
+    return letter;
+}
+getLetter();
+    </script>
+     <a href="/2_If_Else.html"><button type="button" style="width: 100%;align-self: center;padding: 12.5%;">Previous exercise</button></a>
+     <a href="/2_Loops.html"><button type="button" style="width: 100%;align-self: center;padding: 12.5%;">Next exercise</button></a>    
+     
+</body>
+</html>

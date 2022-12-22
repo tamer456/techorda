@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Let and const</title>
+</head>
+<body>
+    <script>
+        'use strict';
+
+        process.stdin.resume();
+        process.stdin.setEncoding('utf-8');
+
+        let inputString = '';
+        let currentLine = 0;
+
+        process.stdin.on('data', inputStdin => {
+            inputString += inputStdin;
+        });
+
+        process.stdin.on('end', _ => {
+            inputString = inputString.trim().split('\n').map(string => {
+                return string.trim();
+            });
+            
+            main();    
+        });
+
+        function readLine() {
+            return inputString[currentLine++];
+    }
+
+        function main() {
+    // Write your code here. Read input using 'readLine()' and print output using 'console.log()'.
+    const PI = Math.PI;
+    let r = prompt("Write the value of 'r'","");;
+    // Print the area of the circle:
+    console.log(PI*r*r);
+    // Print the perimeter of the circle:
+    console.log(2*PI*r);
+    try {    
+        // Attempt to redefine the value of constant variable PI
+        PI = 0;
+        // Attempt to print the value of PI
+        console.log(PI);
+    } catch(error) {
+        console.error("You correctly declared 'PI' as a constant.");
+    }
+    }
+    main();
+    </script>
+    <a href="/2_Loops.html"><button type="button" style="width: 100%;align-self: center;padding: 12.5%;">Previous exercise</button></a>
+    <a href="/1_Functions.html"><button type="button" style="width: 100%;align-self: center;padding: 12.5%;">Next exercise</button></a>    
+    
+</body>
+</html>
