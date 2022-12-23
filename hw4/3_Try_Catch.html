@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Try, catch</title>
+</head>
+<body>
+    <script>
+        function reverseString(s) {
+            try {
+                let splitString = s.split("");
+                let reversedArray = splitString.reverse();
+                let fullArray = reversedArray.join("");
+                console.log(fullArray);
+            } catch (error) {
+                console.log("s.split is not a function");
+                console.log(s);
+            }
+        }
+    reverseString(prompt("Type s",''));
+    </script>
+    <a href="/3_Arrays.html"><button type="button" style="width: 100%;align-self: center;padding: 12.5%;">Previous exercise</button></a>
+    <a href="/3_Throw.html"><button type="button" style="width: 100%;align-self: center;padding: 12.5%;">Next exercise</button></a>    
+    
+</body>
+</html>

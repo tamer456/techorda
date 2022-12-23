@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Throw</title>
+</head>
+<body>
+    <script>
+        function isPositive(a) {
+    let ZeroError = new Error("Zero Error");
+    let NegativeError = new Error("Negative Error");
+    let YesError = new Error("YES");
+    
+    if (a==0){
+        throw ZeroError;
+        }
+    else if (a<0){
+        throw NegativeError;
+     }
+    else{
+        throw YesError;
+     }
+    
+    }
+    let n = prompt("Type the value of 'n'","");
+    for(let i=0;i<n;i++){
+        try{
+            console.log(isPositive(prompt("Type the value of 'a'","")));
+        }
+        catch(e){
+            console.log(e.message);
+        }
+    }
+    </script>
+    <a href="/3_Try_Catch.html"><button type="button" style="width: 100%;align-self: center;padding: 12.5%;">Previous exercise</button></a>
+    <a href="/8_Button.html"><button type="button" style="width: 100%;align-self: center;padding: 12.5%;">Next exercise</button></a>    
+    
+</body>
+</html>
