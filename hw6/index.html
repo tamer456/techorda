@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/body-pix@2.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.2"></script>
+    <script src="https://cdn.jsdelivr.net/npm/face-api.js@0.22.0/dist/face-api.min.js"></script>
+    <title>FaceDetector</title>
+     <style>
+      canvas {
+        position: absolute;
+        left: 0;
+        top: 0;
+      }
+      * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+        }
+
+        .wrap {
+            position: relative;
+            min-height: 100vh;
+            display: grid;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .wrap > * {
+            grid-column: 1;
+            grid-row: 1;
+        }
+
+        .face {
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <video class="webcam"></video>
+        <canvas class="video"></canvas>
+        <canvas class="face"></canvas>
+    </div>
+    <h1>Options</h1>
+        <div class="optionsPanelOpt">
+          <div class="optionsPanelOptLabel">Background blur</div>
+          <div class="optionsPanelOptValue" id="backgroundBlurValue">0</div>
+          <input
+            type="range"
+            class="optionsPanelOptRange"
+            min="1"
+            max="25"
+            id="backgroundBlur"
+          />
+        </div>
+        <div class="optionsPanelOpt">
+          <div class="optionsPanelOptLabel">Border blur</div>
+          <div class="optionsPanelOptValue" id="borderBlurValue">0</div>
+          <input
+            type="range"
+            class="optionsPanelOptRange"
+            min="1"
+            max="25"
+            id="borderBlur"
+          />
+        </div>
+        <div class="optionsPanelOpt">
+          <div class="optionsPanelOptLabel">Horizontal flip</div>
+          <input
+            type="checkbox"
+            class="optionsPanelOptRange"
+            id="horizontalFlip"
+          />
+        </div>
+      </div>
+    <div class="menu">
+        <button id="blur">Blur</button>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
